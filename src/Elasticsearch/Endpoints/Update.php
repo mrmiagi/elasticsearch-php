@@ -71,7 +71,7 @@ class Update extends AbstractEndpoint
     public function getParamWhitelist()
     {
         return array(
-            'consistency',
+            'wait_for_active_shards',
             'fields',
             'lang',
             'parent',

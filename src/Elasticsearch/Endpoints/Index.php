@@ -80,7 +80,7 @@ class Index extends AbstractEndpoint
     public function getParamWhitelist()
     {
         return array(
-            'consistency',
+            'wait_for_active_shards',
             'op_type',
             'parent',
             'percolate',

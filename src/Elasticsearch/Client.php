@@ -230,7 +230,7 @@ class Client
      * $params['id']           = (string) The document ID (Required)
      *        ['index']        = (string) The name of the index (Required)
      *        ['type']         = (string) The type of the document (Required)
-     *        ['consistency']  = (enum) Specific write consistency setting for the operation
+     *        ['wait_for_active_shards']  = (enum) Specific write wait_for_active_shards setting for the operation
      *        ['parent']       = (string) ID of parent document
      *        ['refresh']      = (boolean) Refresh the index after performing the operation
      *        ['replication']  = (enum) Specific replication type
@@ -680,7 +680,7 @@ class Client
      * $params['index']        = (string) The name of the index (Required)
      *        ['type']         = (string) The type of the document (Required)
      *        ['id']           = (string) Specific document ID (when the POST method is used)
-     *        ['consistency']  = (enum) Explicit write consistency setting for the operation
+     *        ['wait_for_active_shards']  = (enum) Explicit write wait_for_active_shards setting for the operation
      *        ['parent']       = (string) ID of the parent document
      *        ['refresh']      = (boolean) Refresh the index after performing the operation
      *        ['replication']  = (enum) Specific replication type
@@ -720,7 +720,7 @@ class Client
     /**
      * $params['index']       = (string) Default index for items which don't provide one
      *        ['type']        = (string) Default document type for items which don't provide one
-     *        ['consistency'] = (enum) Explicit write consistency setting for the operation
+     *        ['wait_for_active_shards'] = (enum) Explicit write wait_for_active_shards setting for the operation
      *        ['refresh']     = (boolean) Refresh the index after performing the operation
      *        ['replication'] = (enum) Explicitly set the replication type
      *        ['fields']      = (list) Default comma-separated list of fields to return in the response for updates
@@ -753,7 +753,7 @@ class Client
      * $params['index']        = (string) The name of the index (Required)
      *        ['type']         = (string) The type of the document (Required)
      *        ['id']           = (string) Specific document ID (when the POST method is used)
-     *        ['consistency']  = (enum) Explicit write consistency setting for the operation
+     *        ['wait_for_active_shards']  = (enum) Explicit write wait_for_active_shards setting for the operation
      *        ['op_type']      = (enum) Explicit operation type
      *        ['parent']       = (string) ID of the parent document
      *        ['refresh']      = (boolean) Refresh the index after performing the operation
@@ -794,7 +794,7 @@ class Client
     /**
      * $params['refresh']             = (boolean) Should the effected indexes be refreshed?
      *        ['timeout']             = (time) Time each individual bulk request should wait for shards that are unavailable
-     *        ['consistency']         = (enum) Explicit write consistency setting for the operation
+     *        ['wait_for_active_shards']         = (enum) Explicit write wait_for_active_shards setting for the operation
      *        ['wait_for_completion'] = (boolean) Should the request should block until the reindex is complete
      *        ['requests_per_second'] = (float) The throttle for this request in sub-requests per second. 0 means set no throttle
      *        ['body']                = (array) The search definition using the Query DSL and the prototype for the index request (Required)
@@ -1068,7 +1068,7 @@ class Client
      * $params['id']                = (string) Document ID (Required)
      *        ['index']             = (string) The name of the index (Required)
      *        ['type']              = (string) The type of the document (Required)
-     *        ['consistency']       = (enum) Explicit write consistency setting for the operation
+     *        ['wait_for_active_shards']       = (enum) Explicit write wait_for_active_shards setting for the operation
      *        ['fields']            = (list) A comma-separated list of fields to return in the response
      *        ['lang']              = (string) The script language (default: mvel)
      *        ['parent']            = (string) ID of the parent document
@@ -1168,7 +1168,7 @@ class Client
      *        ['request_cache']            = (boolean) Specify if request cache should be used for this request or not,
      * defaults to index level setting
      *        ['refresh']                  = (boolean) Should the effected indexes be refreshed?
-     *        ['consistency']              = (enum) Explicit write consistency setting for the operation
+     *        ['wait_for_active_shards']              = (enum) Explicit write wait_for_active_shards setting for the operation
      * (one,quorum,all)
      *        ['scroll_size']              = (integer) Size on the scroll request powering the update_by_query
      *        ['wait_for_completion']      = (boolean) Should the request should block until the reindex is complete.

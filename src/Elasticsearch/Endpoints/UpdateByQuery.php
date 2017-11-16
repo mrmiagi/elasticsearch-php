@@ -102,7 +102,7 @@ class UpdateByQuery extends AbstractEndpoint
             'version_type',
             'request_cache',
             'refresh',
-            'consistency',
+            'wait_for_active_shards',
             'scroll_size',
             'wait_for_completion',
         ];

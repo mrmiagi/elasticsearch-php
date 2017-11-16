@@ -54,7 +54,7 @@ class Delete extends AbstractEndpoint
     public function getParamWhitelist()
     {
         return array(
-            'consistency',
+            'wait_for_active_shards',
             'parent',
             'refresh',
             'replication',
